@@ -7,7 +7,7 @@ public class NumWords {
 		NumberToWords = NumberToWords/10;
 		double TensInNumber = ((double)NumberToWords)%10;
 		NumberToWords = NumberToWords/10;
-		double HundredsInNumber = ((double)NumberToWords)%10;
+		double HundredsInNumber = NumberToWords;
 		System.out.print((int)HundredsInNumber);
 		System.out.print(" hundreds, ");
 		System.out.print((int)TensInNumber);
