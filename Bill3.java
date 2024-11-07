@@ -11,8 +11,8 @@ public class Bill3 {
 		double a = Finalsum;
 		double b;
 		b = Math.ceil(a/3);
-		System.out.print("Dear " + name1 + "," + name2 + ", " + name3 + ": pay ");
+		System.out.print("Dear " + name1 + ", " + name2 + ", and " + name3 + ": pay ");
 		System.out.print(b);
-		System.out.print(" Sheekels each");
+		System.out.print(" Shekels each");
 	}
 }
