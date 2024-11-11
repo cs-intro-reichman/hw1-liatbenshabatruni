@@ -10,20 +10,23 @@ public class TimeFormat {
 		// and then uses parseInt to cast the resulting string as an int.
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
+		//hours:
+		//ther are 3 option to the hours - bigger than 12, equal to 12, smaller to 12: 
+		//minutes:
+		//if it's less then 10 - will add '0' to the print so will get 0:05 not 0:5
+
 		//in order to turn the time from 24 scale to 12 scale, if the time is bigget then 12 
-		//will reduce it with 12, for example 23:00 in 12's scale is 11:00 (12 unit reduced)
-		//now we will check the minutes, if it's less then 10 - will add '0' to the print so will get 00:05
-		//and not 00:5
+		//will reduce it with 12, for example 23:00 in 12's scale is 11:00 (12 unit reduced) and it's PM
 		if (hours > 12) {hours = hours-12;
 			if (minutes <10) {System.out.println(hours+":"+"0"+minutes+" PM");}
 			else System.out.println(hours+":"+minutes+" PM");
 		}
-		//if hours<12
+		//if hours<12, will handle the minutes and add 'AM'
 		else  {
 			if (hours <12){
 			if (minutes <10) {System.out.println(hours+":"+"0"+minutes+" AM");}
 			else System.out.println(hours+":"+minutes+" AM");}
-			//if hours=12
+		//if hours=12, will handle the minutes and add 'PM'
 			else {
 			if (minutes <10) {System.out.println(hours+":"+"0"+minutes+" PM");}
 			else System.out.println(hours+":"+minutes+" PM");}
